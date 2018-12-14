@@ -52,8 +52,8 @@ function fetchTasks (identifier, config, successCallback, failureCallback) {
                 failureCallback(`The tasklists.list API returned an error: ${err}`);
                 return;
             }
-            const taskLists = res.data.items;
-            if (taskLists && taskLists.length > 0) {
+            const taskLists = res.data.items || [];
+            if (taskLists.length > 0) {
                 taskLists.forEach((taskList) => {
                     if (config.listID && taskList.id === config.listID) {
                         config.listName = taskList.title;
@@ -82,7 +82,7 @@ function fetchTasks (identifier, config, successCallback, failureCallback) {
                 failureCallback(`The tasks.list (${config.listID}) API returned an error: ${err}`);
                 return;
             }
-            var payload = {config, tasks: res.data.items};
+            var payload = {config, tasks: res.data.items || []};
             successCallback(payload);
         });            
     }
