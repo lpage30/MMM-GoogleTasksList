@@ -147,6 +147,9 @@ Module.register("MMM-GoogleTasksList",{
 	getDom: function() {
 		var self = this;
 		var wrapper = document.createElement('div');
+		if (self.hidden) {
+			return wrapper;
+		}
 		wrapper.className = 'container small';
 		function toggleStatusOnClick(item) {
 			return function () {
