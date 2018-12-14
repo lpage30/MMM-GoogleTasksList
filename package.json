@@ -1,0 +1,27 @@
+{
+  "name": "mmm-googletaskslist",
+  "version": "1.0.0",
+  "description": "Module for the [MagicMirror²](https://github.com/MichMich/MagicMirror/) smart mirror.",
+  "main": "MMM-GoogleTasksList.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lpage30/MMM-GoogleTasksList.git"
+  },
+  "keywords": [
+    "Google",
+    "Tasks",
+    "List"
+  ],
+  "author": "Larry Page",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lpage30/MMM-GoogleTasksList/issues"
+  },
+  "homepage": "https://github.com/lpage30/MMM-GoogleTasksList#readme",
+  "dependencies": {
+    "googleapis": "^36.0.0"
+  }
+}

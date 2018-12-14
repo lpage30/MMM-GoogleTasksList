@@ -1,0 +1,36 @@
+.MMM-GoogleTasksList .container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    transform: translateY(-.6em);
+}
+
+.MMM-GoogleTasksList .item {
+    text-align: left;
+    padding-bottom: .25em;
+    }
+
+/* .MMM-GoogleTasksList .item.title {
+} */
+
+.MMM-GoogleTasksList .item.date {
+    padding-left: 1.7em;
+    text-align: right;
+}
+
+.MMM-GoogleTasksList .item.notes {
+    padding-left: .95em;
+    font-size: 0.8em;
+    padding-bottom: 0;
+}
+
+.MMM-GoogleTasksList .item.child {
+    text-align: left;
+    padding-left: 1.5em;
+}
+
+.MMM-GoogleTasksList .fa  {
+  vertical-align: middle;
+  padding-bottom: .25em;
+  padding-right: .25em;
+  font-size: 0.60em;
+}
