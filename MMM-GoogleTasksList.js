@@ -84,6 +84,14 @@ Module.register("MMM-GoogleTasksList",{
 		this.pause = false;
 		this.scheduleUpdateRequestInterval();			
 	},
+	resume: function () {
+		this.requestUpdate();
+	},
+
+	suspend: function () {
+		this.updateDom();
+	},
+
 	getHeader: function () {
 		return this.config.listName || this.data.header;
 	},
