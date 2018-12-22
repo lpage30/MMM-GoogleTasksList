@@ -78,11 +78,13 @@ Module.register("MMM-GoogleTasksList",{
 		this.scheduleUpdateRequestInterval();			
 	},
 	resume: function () {
+		Log.log('Resume GoogleTasksList');
 		this.render = true;
 		this.requestUpdate();
 	},
 
 	suspend: function () {
+		Log.log('Suspend GoogleTasksList');
 		this.render = false;
 		this.updateDom();
 	},
