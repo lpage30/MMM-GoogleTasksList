@@ -1,4 +1,4 @@
-const getRFC3339DateTime = (days) => {
+const getListDateTime = (days) => {
 	const RFC3339_Format = 'YYYY-MM-DDTHH:mm:ss.000Z';
 	let result = moment();
 	if (days) {
@@ -12,7 +12,7 @@ const itemToItemForUpdate = (item) => ({
 	status: item.status,
 	completed: item.completed,
 	due: item.due,
-	updated: getRFC3339DateTime(),
+	updated: getListDateTime(),
 });
 
 Module.register("MMM-GoogleTasksList",{
@@ -134,7 +134,7 @@ Module.register("MMM-GoogleTasksList",{
 		if (newStatus == 'completed') {
 			method = 'PUT';
 			item.status = 'completed';
-			item.completed = getRFC3339DateTime();
+			item.completed = getListDateTime();
 		}
 		if (newStatus === 'delete') {
 			method = 'DELETE';
